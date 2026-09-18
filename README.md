@@ -16,7 +16,7 @@ stack tecnológico, e incluye un cuestionario de repaso sobre esa teoría.
 ## 🔗 Enlaces
 
 - **Repositorio (GitHub):** <https://github.com/Mogollo7/mi_proyecto_python>
-- **Fork base:** <https://github.com/g3in-unilasallista/mi_proyecto_python/forks>
+- **Fork base:** [https://github.com/g3in-unilasallista/mi_proyecto_python/forks](https://github.com/g3in-unilasallista/mi_proyecto_python/pull/14)
 - **Demo en vivo (Render):** <https://mi-proyecto-python-03d8.onrender.com>
 
 ---
