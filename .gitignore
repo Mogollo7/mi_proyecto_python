@@ -1,0 +1,6 @@
+# Entorno virtual de Python
+.venv/
+
+.agents/
+
+.claude/
