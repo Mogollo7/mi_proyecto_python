@@ -5,16 +5,44 @@
 ![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![Licencia](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Una aplicación web moderna y elegante construida con **Python** y **Flask**, diseñada con un estilo orgánico inspirado en los colores de la naturaleza, efectos de cristal esmerilado (*glassmorphism*), tipografía sobria y gráficos vectoriales **SVG**.
+Una aplicación web construida con **Python** y **Flask**, con una interfaz
+propia (branding en tono índigo, tipografía clara, componentes planos) y
+gráficos vectoriales **SVG**. Además de servir la interfaz real, la página
+documenta de forma explicativa una arquitectura de software propuesta y su
+stack tecnológico, e incluye un cuestionario de repaso sobre esa teoría.
+
+---
+
+## 🔗 Enlaces
+
+- **Repositorio (GitHub):** <https://github.com/Mogollo7/mi_proyecto_python>
+- **Fork base:** <https://github.com/g3in-unilasallista/mi_proyecto_python/forks>
+- **Demo en vivo (Render):** <https://mi-proyecto-python-03d8.onrender.com>
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **Backend**: Python 3, Flask, Gunicorn
-- **Frontend**: HTML5, Vanilla CSS3 (Variables CSS, Flexbox, CSS Grid, Glassmorphism, Micro-animaciones)
-- **Recursos**: SVG Vectorial puro, Google Fonts (*Playfair Display* & *Plus Jakarta Sans*)
+- **Frontend**: HTML5, Vanilla CSS3 (Variables CSS, Flexbox, CSS Grid, componentes planos, micro-animaciones)
+- **Recursos**: SVG Vectorial puro, Google Fonts (*Space Grotesk*, *Inter* & *JetBrains Mono*)
 - **Despliegue**: Render, Git & GitHub
+
+---
+
+## 📁 Estructura de carpetas
+
+```text
+mi_proyecto_python/
+├── app.py                 # Servidor Flask real de esta página
+├── requirements.txt       # Dependencias reales (Flask, Gunicorn)
+├── Procfile                # Comando de arranque para Render
+├── templates/
+│   └── index.html         # Página real (incluye contenido explicativo)
+├── evidencias/             # Evidencias reales del proyecto (capturas, comandos)
+├── LICENSE
+└── README.md               # Esta documentación
+```
 
 ---
 
@@ -217,7 +245,7 @@ Crea `templates/index.html` con la interfaz centrada, tipografía y gráficos SV
                 <p>Potenciado por Python y Flask.</p>
             </div>
         </div>
-        <p align="center" style="margin-top: 30px;">Creado por Feibert Alirio Guzmán Pérez</p>
+        <p align="center" style="margin-top: 30px;">Creado por Juan Sebastian Martinez Galeano</p>
     </div>
 
 </body>
@@ -284,5 +312,60 @@ Abre tu navegador en:
 
 ---
 
+## 🧭 Arquitectura y stack documentados en la página
+
+La página (`templates/index.html`) incluye, a partir de esta versión, una sección
+explicativa sobre una **arquitectura de software propuesta** para escalar el
+proyecto, y sobre el **stack tecnológico documentado** para esa propuesta:
+
+- **Python** — lenguaje descrito para los servicios backend de la arquitectura
+  propuesta (y, además, lenguaje real del backend actual de esta página).
+- **FastAPI** — framework de Python documentado para construir la API y los
+  servicios backend propuestos.
+- **Vite** — herramienta de desarrollo y construcción documentada para un
+  futuro frontend desacoplado.
+- **PostgreSQL** — sistema de gestión de base de datos relacional documentado
+  para la persistencia de los servicios propuestos.
+- **Arquitectura de microservicios** — organización conceptual en servicios
+  independientes, desplegables y escalables por separado.
+- **Render** — plataforma de despliegue, tanto de esta página real como,
+  documentalmente, de la arquitectura propuesta.
+
+> **Importante:** la arquitectura y el stack anteriores se presentan como
+> **contenido explicativo** dentro de la página estática y **no forman parte
+> de la implementación interna** de esta página, salvo las tecnologías que ya
+> pertenecen al proyecto original (Python, Flask, Gunicorn, Render, HTML5,
+> CSS3 y SVG). Esta página **no** ejecuta FastAPI, **no** tiene una base de
+> datos PostgreSQL y **no** está dividida en microservicios: sigue siendo un
+> sitio servido por Flask que renderiza una única plantilla Jinja2.
+
+La página también incluye una sección **Cuestionario** con 10 preguntas de
+repaso (formato pregunta/respuesta desplegable, sin JavaScript) sobre esta
+misma teoría: Python, Flask vs. FastAPI, Vite, PostgreSQL, microservicios,
+Render y Gunicorn.
+
+## 📁 Evidencias
+
+La carpeta [`evidencias/`](evidencias/) contiene evidencias reales del
+proyecto:
+
+- `image.png` — repositorio `mi_proyecto_python` en GitHub (fork sincronizado
+  con `main`).
+- `Captura de pantalla 2026-09-18 112401.png` — activación del entorno
+  virtual e instalación de dependencias (`pip install -r requirements.txt`).
+- `Captura de pantalla 2026-09-18 112419.png` — ejecución real del servidor
+  con `python app.py`.
+- `comandos-ejecutados.txt` — registro de los comandos ejecutados y sus
+  resultados reales durante la validación de esta versión de la página
+  (creación del entorno virtual, instalación de dependencias, arranque del
+  servidor y verificación funcional/responsive).
+
+Estas evidencias viven **únicamente en este README** (y en la carpeta
+`evidencias/` del repositorio); la página web ya no incluye una sección de
+evidencias, para mantener la interfaz enfocada en el proyecto, su
+arquitectura y el cuestionario de repaso.
+
+---
+
 ### 👤 Autor
-**Feibert Alirio Guzmán Pérez**
+**Juan Sebastian Martinez Galeano**

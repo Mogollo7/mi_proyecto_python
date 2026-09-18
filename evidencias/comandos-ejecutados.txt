@@ -1,0 +1,54 @@
+Evidencia de comandos ejecutados durante la validación de la página estática
+(Flask + Jinja2 + HTML5/CSS3), registrada el 2026-09-18.
+
+--------------------------------------------------------------------------
+Comando:
+python -m venv .venv
+
+Resultado:
+(entorno virtual creado sin errores en D:\mi_proyecto_python\mi_proyecto_python\.venv)
+
+--------------------------------------------------------------------------
+Comando:
+./.venv/Scripts/python.exe -m pip install -r requirements.txt
+
+Resultado (salida real, resumida):
+Collecting jinja2>=3.1.2 (from Flask>=3.0.0->-r requirements.txt (line 1))
+Collecting markupsafe>=2.1.1 (from Flask>=3.0.0->-r requirements.txt (line 1))
+Collecting werkzeug>=3.1.0 (from Flask>=3.0.0->-r requirements.txt (line 1))
+Installing collected packages: markupsafe, itsdangerous, gunicorn, click, blinker, werkzeug, jinja2, Flask
+Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.0 gunicorn-26.2.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.8
+
+--------------------------------------------------------------------------
+Comando:
+python app.py
+(ejecutado por el harness de previsualización sobre .venv/Scripts/python.exe app.py)
+
+Resultado (log real del servidor):
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 413-099-951
+127.0.0.1 - - [18/Sep/2026 11:50:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Sep/2026 11:50:37] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Sep/2026 11:50:38] "GET / HTTP/1.1" 200 -
+
+--------------------------------------------------------------------------
+Validación funcional realizada sobre http://localhost:5000 (navegador Chromium
+del harness de previsualización):
+- Carga de la página: OK (200 OK).
+- Navegación por anclas (Proyecto, Arquitectura, Stack, Despliegue, Evidencias,
+  Créditos): OK.
+- Responsive: verificado en viewport de escritorio (1280px) y móvil (375px),
+  sin scroll horizontal, cuadrículas colapsando a una columna en móvil.
+- Carga de imágenes de evidencias desde static/evidencias/: OK (verificado por
+  inspección de la página renderizada).
+- Sección de créditos: muestra "Juan Sebastian Martinez Galeano".
+- Corrección aplicada durante la validación: se detectó un artefacto de
+  renderizado (pantalla en negro al hacer scroll) causado por combinar
+  "position: sticky" con "backdrop-filter: blur()" en el encabezado; se
+  resolvió cambiando el encabezado a un fondo sólido.
